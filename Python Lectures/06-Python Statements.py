@@ -46,5 +46,23 @@ x = 10
 while x > 0:
     print(x)
     x-=1
+#%%
+# Loops with else statement
+'''
+also called as 'non-break'
+else part is executed only if the loop didn't encounter any break while iterating 
+'''
+
+lst = [1,2,3,4,5]
+
+for i in lst:
+    print(i)
 else:
-    print('done')
+    print('Complete!')
+#%%
+for i in lst:
+    if(i==3):
+        break
+    print(i)
+else:
+    print('Complete!')
