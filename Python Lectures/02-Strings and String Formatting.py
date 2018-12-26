@@ -26,7 +26,7 @@ Negative numbers denote reverse indexing
 '''
 #%%
 print(my_name[1:])
-print(my_name[-1:])
+print(my_name[::-1])
 print(my_name[1:4:2])
 print(my_name[::])
 #%%
