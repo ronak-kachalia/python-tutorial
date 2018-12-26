@@ -36,6 +36,10 @@ def test():
         print(z)
         nonlocal y # refers to the enclosing function i.e test().y
         print(y)
+        def t3():
+            nonlocal y
+            print(y)
+        t3()
     t2()
     
 test()

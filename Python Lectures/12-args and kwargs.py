@@ -17,7 +17,7 @@ Rewriting the above function:
 def myfunc(*args):
     return sum(args)*.05
 myfunc(40,60,20)
-
+#%%
 def myfunc(*spam):
     return sum(spam)*.05
 myfunc(40,60,20)

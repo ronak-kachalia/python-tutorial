@@ -11,7 +11,7 @@ iterable, such as a list.
 #%%
 # Map for Lists
 def _square(x):
-    return x*x;
+    return x*x
 
 lst = [1,2,3,4]
 

@@ -58,7 +58,8 @@ quack_and_fly(d)
 quack_and_fly(p)
 #%%
 '''
-##### Asking Forgiveness #####
+##### Asking Permission #####
+# LBYL
 '''
 class duck:
     def quack(self):
