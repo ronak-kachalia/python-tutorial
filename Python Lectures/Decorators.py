@@ -91,6 +91,34 @@ def display_info(name,age):
 display_info('Ronak',22)
 #%%
 '''
+The __call__ method
+
+The __call__ method can be used to turn the instances of the class into callables. Functions are callable objects. A callable object is an object which can be used and behaves like a function but might not be a function. By using the __call__ method it is possible to define classes in a way that the instances will be callable objects. The __call__ method is called, if the instance is called "like a function", i.e. using brackets. The following example defines a class with which we can create abitrary polynomial functions:
+'''
+class Polynomial:
+    
+    def __init__(self, *coefficients):
+        self.coefficients = coefficients[::-1]
+        
+    def __call__(self, x):
+        res = 0
+        for index, coeff in enumerate(self.coefficients):
+            res += coeff * x** index
+        return res
+
+# a constant function
+p1 = Polynomial(42)
+
+# a straight Line
+p2 = Polynomial(0.75, 2)
+
+# a third degree Polynomial
+p3 = Polynomial(1, -0.5, 0.75, 2)
+
+for i in range(1, 10):
+    print(i, p1(i), p2(i), p3(i))
+#%%
+'''
 Practical Example:
     Logging function
 '''

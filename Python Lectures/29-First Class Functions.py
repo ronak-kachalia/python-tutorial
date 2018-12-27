@@ -1,5 +1,5 @@
 '''
-##### Lecture 29: Firsst Class Functions and Closures. (Also known as High Order Dunctions)#####
+##### Lecture 29: Firsst Class Functions and Closures. (Also known as High Order Functions)#####
 '''
 '''
 In computer science, a programming language is said to have first-class functions if it treats functions as first-class citizens. This means the language supports passing functions as arguments to other functions, returning them as the values from other functions, and assigning them to variables or storing them in data structures.
