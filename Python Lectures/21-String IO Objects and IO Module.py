@@ -1,11 +1,12 @@
-#%%
-'''
-##### Lecture 20: StringIO Objects and the io Module #####
+# =============================================================================
+##### StringIO Objects and the io Module #####
+# =============================================================================
 
-Text data is stored in a StringIO object, while binary data would be stored in 
-a BytesIO object. This object can then be used as input or output to most 
-functions that would expect a standard file object.
-'''
+# =============================================================================
+# Text data is stored in a StringIO object, while binary data would be stored in 
+# a BytesIO object. This object can then be used as input or output to most 
+# functions that would expect a standard file object.
+# =============================================================================
 import io
 
 # Arbitrary String

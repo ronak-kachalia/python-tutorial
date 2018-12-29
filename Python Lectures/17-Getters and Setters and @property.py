@@ -1,14 +1,15 @@
-#%%
-'''
-##### Lecture 15: Decorators #####
+# =============================================================================
+##### Decorators #####
+# =============================================================================
 
-Decorators can be thought of as functions which modify the functionality of 
-another function. They help to make your code shorter and more "Pythonic".
-'''
+# =============================================================================
+# Decorators can be thought of as functions which modify the functionality of 
+# another function. They help to make your code shorter and more "Pythonic".
+# =============================================================================
 #%%
-'''
-##### Creating Decorator #####
-'''
+# =============================================================================
+# Creating Decorator
+# =============================================================================
 def new_decorator(func):
 
     def wrap_func():
@@ -28,27 +29,27 @@ func_needs_decorator()
 func_needs_decorator = new_decorator(func_needs_decorator)
 func_needs_decorator()
 #%%
-'''
-##### Creating Decorator using '@' #####
-'''
+# =============================================================================
+# Creating Decorator using '@'
+# =============================================================================
 @new_decorator
 def func_needs_decorator():
     print("This function is in need of a Decorator")
 
 func_needs_decorator()
 #%%
-'''
-GETTERS AND SETTERS (Mutator Methods)
+# =============================================================================
+# GETTERS AND SETTERS (Mutator Methods)
 
-Property
+# Property
 
-property(fget=None, fset=None, fdel=None, doc=None)
+# property(fget=None, fset=None, fdel=None, doc=None)
 
-where, fget is function to get value of the attribute, fset is function to 
-set value of the attribute, fdel is function to delete the attribute and doc 
-is a string (like a comment). As seen from the implementation, these function 
-arguments are optional.
-'''
+# where, fget is function to get value of the attribute, fset is function to 
+# set value of the attribute, fdel is function to delete the attribute and doc 
+# is a string (like a comment). As seen from the implementation, these function 
+# arguments are optional.
+# =============================================================================
 class Temperature:
     def __init__(self, temperature = 0):
         self.temperature = temperature
@@ -66,10 +67,10 @@ x = Temperature()
 x.temperature = 10
 print(x.temperature)
 #%%
-'''
-A property object has three methods, getter(), setter(), and deleter() to 
-specify fget, fset and fdel at a later point. This means, the line
-'''
+# =============================================================================
+# A property object has three methods, getter(), setter(), and deleter() to 
+# specify fget, fset and fdel at a later point. This means, the line
+# =============================================================================
 class Temperature:
     def __init__(self, temperature = 0):
         self.temperature = temperature
@@ -86,9 +87,9 @@ class Temperature:
     # assign fset
     temperature = temperature.setter(set_temperature)
 #%%
-'''
-@Property decorator
-'''
+# =============================================================================
+# @Property decorator
+# =============================================================================
 class P:
     def __init__(self,x):
         self.x = x

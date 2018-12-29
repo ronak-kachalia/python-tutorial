@@ -1,11 +1,10 @@
-#%%
-'''
-##### Lecture 13: Duck Typing, Asking for Forgiveness, EAFP and LBYL #####
-'''
+# =============================================================================
+##### Duck Typing, Asking for Forgiveness, EAFP and LBYL #####
+# =============================================================================
 
-'''
-##### Duck typing #####
-'''
+# =============================================================================
+# Duck typing 
+# =============================================================================
 
 # GENERALLY
 class duck:
@@ -57,10 +56,10 @@ p = person()
 quack_and_fly(d)
 quack_and_fly(p)
 #%%
-'''
-##### Asking Permission #####
+# =============================================================================
+# Asking Permission
 # LBYL
-'''
+# =============================================================================
 class duck:
     def quack(self):
         print('I quacked!')
@@ -87,13 +86,13 @@ p = person()
 quack_and_fly(d)
 quack_and_fly(p)  
 #%%
-'''
-Not Permission
+# =============================================================================
+# Not Permission
 
-EAFP: Easier to Ask Forgiveness than Permission
+# EAFP: Easier to Ask Forgiveness than Permission
 
-LBYL: Look Befor You Leap
-'''  
+# LBYL: Look Befor You Leap
+# =============================================================================
 
 # EAFP
 class duck:
@@ -121,9 +120,9 @@ p = person()
 quack_and_fly(d)
 quack_and_fly(p) 
 #%%
-'''
-LBYL vs EAFP
-'''
+# =============================================================================
+# LBYL vs EAFP
+# =============================================================================
 my_dict = {'name':'ronak','age':22}
 
 #LBYL

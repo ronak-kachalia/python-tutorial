@@ -4,11 +4,11 @@ import mathOperations as py
 class TestCalc(unittest.TestCase):
     
     def test_add(self):
-        self.assertEqual(py.add(10,5),15)
+        self.assertEqual(py.add(10,5),10)
         self.assertEqual(py.add(1,-1),0)
         self.assertEqual(py.add(-12,-5),-17)
     def test_sub(self):
-        self.assertEqual(py.sub(10,5),5)
+        self.assertEqual(py.sub(10,5),10)
         self.assertEqual(py.sub(1,-1),2)
         self.assertEqual(py.sub(-12,-5),-7)
     def test_mul(self):

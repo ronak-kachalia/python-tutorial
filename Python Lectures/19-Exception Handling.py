@@ -1,19 +1,21 @@
-#%%
-'''
-##### Lecture 18: Exception Handling #####
-'''
-'''
-try:
-   You do your operations here...
-   ...
-except ExceptionI:
-   If there is ExceptionI, then execute this block.
-except ExceptionII:
-   If there is ExceptionII, then execute this block.
-   ...
-else:
-   If there is no exception then execute this block. 
-'''
+# =============================================================================
+##### Exception Handling #####
+# =============================================================================
+
+# =============================================================================
+# try:
+#    You do your operations here...
+#    ...
+# except ExceptionI:
+#    If there is ExceptionI, then execute this block.
+# except ExceptionII:
+#    If there is ExceptionII, then execute this block.
+#    ...
+# else:
+#    If there is no exception then execute this block. 
+# finally:
+#    Finally block will be executed anyway
+# =============================================================================
 
 try:
     f = open('testfile','w')
@@ -27,6 +29,7 @@ else:
     f.close()
 
 #%%
+
 # Finally block will be executed anyway
     
 try:
