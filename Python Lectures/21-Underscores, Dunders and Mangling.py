@@ -8,7 +8,33 @@
 # Single underscores are a Python naming convention indicating a name is 
 # meant for internal use. It is generally not enforced by the Python interpreter 
 # and meant as a hint to the programmer only.
+
+# Now if you use a wildcard import to import all names from the module, Python will 
+# not import names with a leading underscore (unless the module defines an __all__ 
+# list that overrides this behavior):
 # =============================================================================
+# This is my_module.py:
+def external_func():
+    return 23
+
+def _internal_func():
+    return 42
+
+from my_module import *
+external_func()
+23
+_internal_func()
+NameError: "name '_internal_func' is not defined"
+
+#%%
+# Unlike wildcard imports, regular imports are not affected by the leading single 
+# underscore naming convention:
+
+import my_module
+my_module.external_func()
+23
+my_module._internal_func()
+42
 #%%
 # =============================================================================
 # 2. Single Trailing Underscore: var_
@@ -42,6 +68,7 @@ print(x.foo)
 print(x._bar)
 # print(x.__baz) # ERROR
 print(x._Test__baz) # CORRECT
+print(Test()._Test__baz)
 
 class ExtendedTest(Test):
     def __init__(self):
@@ -69,6 +96,21 @@ class Test:
 x = Test()
 # print(x.__mymethod()) # Erroe
 print(x._Test__mymethod()) # Correct
+#%%
+# Double underscore name mangling is fully transparent to the programmer. Take 
+# a look at the following example that will confirm this:
+
+class ManglingTest:
+    def __init__(self):
+        self.__mangled = 'hello'
+
+    def get_mangled(self):
+        return self.__mangled
+
+>>> ManglingTest().get_mangled()
+'hello'
+>>> ManglingTest().__mangled
+AttributeError: "'ManglingTest' object has no attribute '__mangled'"
 #%%
 # =============================================================================
 # What’s a “dunder” in Python?
