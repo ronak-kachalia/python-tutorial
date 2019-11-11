@@ -77,6 +77,30 @@ print(next(nums))
 print(next(nums))
 print(next(nums))
 print(next(nums))
+
+#%%
+class PowTwo:
+    """Class to implement an iterator
+    of powers of two"""
+
+    def __init__(self, max = 0):
+        self.max = max
+
+    def __iter__(self):
+        self.n = 0
+        return self
+
+    def __next__(self):
+        if self.n <= self.max:
+            result = 2 ** self.n
+            self.n += 1
+            return result
+        else:
+            raise StopIteration
+a = PowTwo(4)
+i = iter(a)
+#%%
+next(i)
 #%%
 #=============================================================================
 # Iterators with Generators
@@ -93,3 +117,15 @@ for i in nums:
     print(i)
     print('Yield')
 #%%
+# Infinite Iterator
+# The built-in function iter() can be called with two arguments where the first 
+# argument must be a callable object (function) and second is the sentinel. 
+# The iterator calls this function until the returned value is equal to the 
+# sentinel.
+int()
+float()
+bool()
+list()
+dict()
+inf = iter(int,1)
+next(inf)
