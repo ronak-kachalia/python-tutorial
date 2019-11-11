@@ -6,7 +6,7 @@
 # A Python dictionary consists of a key and then an associated value. 
 # That value can be almost any Python object.
 
-# NOTE: For keys, we can use Strings, numbers, tuplesn Booleans and None.
+# NOTE: For keys, we can use Strings, numbers, tuples, Booleans and None.
 # Dictionaries allow duplicate keys but withh show warning. Also, it will print 
 # the value of the duplicate key of last entered value for that key
 # LISTS CANNOT BE USED AS KEYS
